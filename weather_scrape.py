@@ -27,9 +27,7 @@ print()
 
 for i in range(len(data)):
     del(data[i][0])
-
     if i != 0:
-
         if data[i][0][:3] == "Tue":
             week_day = "Tuesday"
 
@@ -46,12 +44,8 @@ for i in range(len(data)):
             week_day = data[i][0][:3] + "day"
 
         length_day = 3
-
     else:
         week_day = data[i][0][:5]
         length_day = 5
-
-    #print(week_day + ", " + data[i][0][length_day:] + ": the high temp will be " + data[i][2][:3] + " with a low of " + data[i][2][3:] + ", and a " + data[i][5] + " chance of rain.")
-
 
     print("On", week_day , ", " + data[i][0][length_day:], ": the highest temperature will be" , data[i][2][:3] , ", the lowest temperature will be", data[i][2][3:] , ", and there is a" , data[i][5] , "chance of rain.")
